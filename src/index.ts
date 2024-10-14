@@ -12,6 +12,7 @@ import searchRoutes from './routes/searchRoutes';
 import ratingRoutes from './routes/ratingRoutes'; 
 import transactionRoutes from './routes/transactionRoutes';
 import adminRoutes from './routes/adminRoutes';
+import getuserRoutes from './routes/getuserRoutes';
 
 
 dotenv.config();
@@ -41,6 +42,7 @@ app.use('/search', searchRoutes);
 app.use('/rate', ratingRoutes); 
 app.use('/transactions', transactionRoutes); 
 app.use('/admin', adminRoutes);  
+app.use('/users', getuserRoutes);  
 
 // Start Server
 app.listen(PORT, async () => {
