@@ -8,6 +8,11 @@ import authRoutes from './routes/authRoutes';
 import userRoutes from './routes/userRoutes';
 import jobRoutes from './routes/jobRoutes';
 import hireRequestRoutes from './routes/hireRequestRoutes';
+import searchRoutes from './routes/searchRoutes'; 
+import ratingRoutes from './routes/ratingRoutes'; 
+import transactionRoutes from './routes/transactionRoutes';
+import adminRoutes from './routes/adminRoutes';
+
 
 dotenv.config();
 require('./config/passport');
@@ -32,6 +37,10 @@ app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 app.use('/jobs', jobRoutes);
 app.use('/hire-requests', hireRequestRoutes);
+app.use('/search', searchRoutes);
+app.use('/rate', ratingRoutes); 
+app.use('/transactions', transactionRoutes); 
+app.use('/admin', adminRoutes);  
 
 // Start Server
 app.listen(PORT, async () => {
